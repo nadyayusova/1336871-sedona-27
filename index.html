@@ -87,5 +87,27 @@
               <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
           </p>
       </footer>
+      <section>
+        <h2>Поиск гостиницы в Седоне</h2><!--скрыть-->
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
+            <label for="check-in-date">Дата заезда:</label>
+            <input type="date" id="check-in-date" name="check-in-date" value="2017-04-24">
+            <br>
+            <label for="check-out-date">Дата выезда:</label>
+            <input type="date" id="check-out-date" name="check-out-date" value="2017-07-04">
+            <br>
+            <label for="adults-quantity">Взрослые:</label>
+            <button type="button">-</button>
+            <input type="number" id="adults-quantity" name="adults-quantity" value="2">
+            <button type="button">+</button>
+            <br>
+            <label for="children-quantity">Дети:</label>
+            <button type="button">-</button>
+            <input type="number" id="children-quantity" name="children-quantity" value="0">
+            <button type="button">+</button>
+            <br>
+            <button type="submit">Найти</button>
+        </form>
+    </section>      
   </body>
 </html>
