@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header,
+.contents,
+.main-footer {
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.site-navigation,
+.reasons-list,
+.features-list,
+.footer-social,
+.sorting-order {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-navigation a,
+.main-footer a,
+.sorting-order a,
+.hotels-list a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.main-navigation {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.main-description-1,
+.main-offer-1,
+.found-text {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.main-description-2,
+.main-offer-2 {
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  line-height: 1.8;
+}
+
+.main-offer-1 {
+  font-size: 30px;
+}
+
+.reasons-item h3 {
+  font-size: 21px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.reasons-item p {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.features-list li {
+  color: #000000;
+  font-weight: bold;
+  line-height: 1;
+  background-color: #ffffff;
+}
+
+.feature-item h3{
+  font-size: 21px;
+}
+
+.feature-item p {
+  font-size: 14px;
+}
+
+.button {
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.found-text {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.sorting h4 {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.sorting-order a {
+  font-size: 12px;
+  color: #0000004d;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  text-decoration-color: #81b3d2;
+  text-decoration-style: dotted;
+}
+
+.current-sorting a {
+  font-size: 12px;
+  color: #81b3d2;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.hotel-record .button {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.hotel-record h2 {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.hotel-specifications {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.hotel-rating {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.footer-contacts {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.gray-button {
+  background-color: #766357;
+}
+
+.blue-button, 
+.blue-background {
+  background-color: #81b3d2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
