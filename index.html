@@ -12,42 +12,42 @@
           <a><img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип Седоны"></a>
           <nav class="main-navigation">
               <ul class="site-navigation">
-                  <li><a href="#">Информация</a></li>
-                  <li><a href="#">Фото и видео</a></li>
-                  <li><a href="#">Карта штата</a></li>
-                  <li><a href="hotels.html">Гостиницы</a></li>
+                  <li class="site-navigation-item"><a href="#">Информация</a></li>
+                  <li class="site-navigation-item"><a href="#">Фото и видео</a></li>
+                  <li class="site-navigation-item"><a href="#">Карта штата</a></li>
+                  <li class="site-navigation-item"><a href="hotels.html">Гостиницы</a></li>
               </ul>
           </nav>
       </header>
       <main class="contents">
           <h1 class="visually-hidden">Седона</h1>
           <div>
-              <p class="main-description-1">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</p>
-              <p class="main-description-2">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+              <p class="main-description-title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</p>
+              <p class="main-description-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </div>
-          <section class="reasons visually-hidden">
+          <section class="reasons">
               <h2 class="visually-hidden">Причины</h2>
               <ol class="reasons-list">
-                  <li class="reasons-item white-text blue-background">
+                  <li class="reasons-item item-accent">
                       <h3>Настоящий городок</h3>
                       <p>&ndash; №1 &ndash;</p>
                       <p>Седона &ndash; не аттракцион для туристов, там течет своя жизнь</p>
                       <ul class="features-list">
-                        <li class="feature-item">
+                        <li class="features-item">
                             <h3>Жилье</h3>
                             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                         </li>
-                        <li class="feature-item">
+                        <li class="features-item">
                             <h3>Еда</h3>
                             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                         </li>
-                        <li class="feature-item">
+                        <li class="features-item">
                             <h3>Сувениры</h3>
                             <p>Не только китайского, но и местного производства!</p>
                         </li>
                       </ul>
                   </li>
-                  <li class="reasons-item white-text blue-background">
+                  <li class="reasons-item item-accent">
                       <h3>Там есть мост дьявола</h3>
                       <p>&ndash; №2 &ndash;</p>
                       <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
@@ -70,9 +70,31 @@
               </ol>
           </section>
           <div>
-              <h2 class="main-offer-1">Заинтересовались?</h2>
-              <p class="main-offer-2">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <h2 class="main-offer-title">Заинтересовались?</h2>
+              <p class="main-offer-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
               <button class="button gray-button" type="button" name="find-hotel">Поиск гостиницы в Седоне</button>
+              <section class="modal-search">
+                <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+                <form action="https://echo.htmlacademy.ru/courses" method="post">
+                    <label for="check-in-date">Дата заезда:</label>
+                    <input type="date" id="check-in-date" name="check-in-date" value="2017-04-24">
+                    <br>
+                    <label for="check-out-date">Дата выезда:</label>
+                    <input type="date" id="check-out-date" name="check-out-date" value="2017-07-04">
+                    <br>
+                    <label for="adults-quantity">Взрослые:</label>
+                    <button type="button">-</button>
+                    <input type="number" id="adults-quantity" name="adults-quantity" value="2">
+                    <button type="button">+</button>
+                    <br>
+                    <label for="children-quantity">Дети:</label>
+                    <button type="button">-</button>
+                    <input type="number" id="children-quantity" name="children-quantity" value="0">
+                    <button type="button">+</button>
+                    <br>
+                    <button class="button item-accent" type="submit">Найти</button>
+                </form>
+              </section> 
           </div>
       </main>
       <footer class="main-footer">
@@ -90,27 +112,5 @@
               <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
           </p>
       </footer>
-      <section class="modal-search visually-hidden">
-        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-            <label for="check-in-date">Дата заезда:</label>
-            <input type="date" id="check-in-date" name="check-in-date" value="2017-04-24">
-            <br>
-            <label for="check-out-date">Дата выезда:</label>
-            <input type="date" id="check-out-date" name="check-out-date" value="2017-07-04">
-            <br>
-            <label for="adults-quantity">Взрослые:</label>
-            <button type="button">-</button>
-            <input type="number" id="adults-quantity" name="adults-quantity" value="2">
-            <button type="button">+</button>
-            <br>
-            <label for="children-quantity">Дети:</label>
-            <button type="button">-</button>
-            <input type="number" id="children-quantity" name="children-quantity" value="0">
-            <button type="button">+</button>
-            <br>
-            <button class="button blue-button" type="submit">Найти</button>
-        </form>
-    </section>      
   </body>
 </html>
