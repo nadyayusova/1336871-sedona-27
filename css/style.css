@@ -1,12 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-.main-header,
-.contents,
-.main-footer {
   font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -22,32 +18,36 @@ body {
 
 .main-navigation a,
 .main-footer a,
-.sorting-order a,
-.hotels-list a {
+.sorting-order a {
   text-decoration: none;
   color: #000000;
+}
+
+.hotels-list a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .main-navigation {
   font-size: 14px;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 1.8em;
 }
 
-.main-description-1,
-.main-offer-1,
+.main-description-title,
+.main-offer-title,
 .found-text {
   font-size: 21px;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.2em;
 }
 
-.main-description-2,
-.main-offer-2 {
+.main-description-text,
+.main-offer-text {
   font-size: 14px;
   color: #333333;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 1.8em;
 }
 
 .main-offer-1 {
@@ -56,30 +56,28 @@ body {
 
 .reasons-item h3 {
   font-size: 21px;
-  color: #000000;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1em;
 }
 
 .reasons-item p {
   font-size: 14px;
-  color: #000000;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1em;
 }
 
 .features-list li {
   color: #000000;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1em;
   background-color: #ffffff;
 }
 
-.feature-item h3{
+.features-item h3 {
   font-size: 21px;
 }
 
-.feature-item p {
+.features-item p {
   font-size: 14px;
 }
 
@@ -88,24 +86,44 @@ body {
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.2em;
+  background-color: #766357;
 }
 
 .found-text {
   font-size: 21px;
-  line-height: 1.2;
+  line-height: 1.2em;
+}
+
+.filter-box form {
+  color: #ffffff;
+  background-color: #766357;
+  background-image: url("../img/filter_background.jpg") ;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter-box legend {
+  font-weight: bold;
+}
+
+.filter-box button[type="submit"] {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
 }
 
 .sorting h4 {
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 .sorting-order a {
   font-size: 12px;
   color: #0000004d;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.5em;
   text-decoration-line: underline;
   text-decoration-color: #81b3d2;
   text-decoration-style: dotted;
@@ -115,54 +133,45 @@ body {
   font-size: 12px;
   color: #81b3d2;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.5em;
   text-decoration: none;
 }
 
-.hotel-record .button {
+.hotels-list .button {
   font-size: 14px;
-  color: #ffffff;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
-.hotel-record h2 {
+.hotels-record h2 {
   font-size: 21px;
-  line-height: 1.2;
+  line-height: 1.2em;
 }
 
-.hotel-specifications {
+.hotels-specifications {
   font-size: 14px;
   color: #333333;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
-.hotel-rating {
+.hotels-rating {
   font-size: 14px;
   color: #666666;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 .footer-contacts {
   font-size: 21px;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.2em;
 }
 
 .footer-copyright {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.8em;
 }
 
-.white-text {
+.item-accent {
   color: #ffffff;
-}
-
-.gray-button {
-  background-color: #766357;
-}
-
-.blue-button, 
-.blue-background {
   background-color: #81b3d2;
 }
 
