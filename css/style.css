@@ -16,30 +16,26 @@ a {
 .site-wrapper {
   width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .contents {
   background-color: #ffffff;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-.main-header img {
+.main-header {
   position: relative;
-  top: 0;
-  left: 530px;
 }
 
-.site-navigation,
-.reasons-list,
-.features-list,
-.footer-social,
-.sorting-order,
-.sorting-direction {
+.main-header .logo-sedona {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reset-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -51,22 +47,15 @@ a {
   /* line-height: 1.8em; */
 }
 
-.main-navigation {
-  background-color: red; /*убрать*/
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
 .site-navigation {
   min-height: 56px;
+  background-color: #ffffff;
   display: flex;
-  align-items: center;
 }
 
 .site-navigation li {
-  background-color: lightblue; /*убрать*/
-  margin: auto 70px;
+  background-color: lightblue; /* убрать */
+  margin: 0 70px;
 }
 
 .site-navigation li:nth-child(2) {
@@ -78,8 +67,6 @@ a {
 }
 
 .main-description,
-.reasons .reasons-item-content,
-.reasons .features-item,
 .main-offer {
   display: flex;
   flex-direction: column;
@@ -89,17 +76,14 @@ a {
 
 .main-description {
   justify-content: flex-start;
-}
-
-.main-description {
   min-height: 726px;
 }
 
-/* текст не ставится по центру, что делать? */
-.main-description-title {
+.main-description .main-description-title {
   margin-top: auto;
 }
-.main-description-text {
+
+.main-description .main-description-text {
   margin-bottom: auto;
 }
 
@@ -154,10 +138,6 @@ a {
   margin-bottom: auto;
 }
 
-.reasons {
-  width: inherit;
-}
-
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
@@ -184,30 +164,16 @@ a {
   min-height: 256px;
 }
 
-.item-accent .reasons-item-content::after {
-  background-color: #81b3d2;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 400px;
-  width: 800px;
-  min-height: 256px;
-}
-
-.item-accent:nth-child(1) .reasons-item-content::after {
-  background-image: url("../img/town_picture1.jpg");
-}
-
-.item-accent:nth-child(2) .reasons-item-content::after {
-  background-image: url("../img/town_picture2.jpg");
-}
-
 .features-list {
   display: flex;
-  flex-wrap: nowrap;
+}
+
+.reasons .features-item,
+.reasons .reasons-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .features-item {
@@ -424,6 +390,8 @@ a {
 
 .main-footer.index {
   margin-top: -120px;
+  position: absolute;
+  width: 1200px;
 }
 
 .footer-contacts,
