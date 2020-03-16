@@ -52,41 +52,41 @@
                     </ul>
                   </li>
                   <li class="reasons-item item-accent">
+                    <img src="img/town_picture2.jpg" width="800" height="256" alt="Фото Моста Дьявола">
                     <div class="reasons-item-content">
-                      <h3>Там есть мост дьявола</h3>
+                      <h3>Там есть мост&nbsp;дьявола</h3>
                       <p>&ndash; №2 &ndash;</p>
                       <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
                     </div>
-                    <img src="img/town_picture2.jpg" width="800" height="256" alt="Фото Моста Дьявола">
                   </li>
                   <li class="reasons-item">
                     <div class="reasons-item-content">
                       <h3>Небольшая площадь</h3>
                       <p>&ndash; №3 &ndash;</p>
-                      <p>Все достопримечательности находятся очень близко</p>
+                      <p>Все достопримечательности находятся&nbsp;очень близко</p>
                     </div>
                   </li>
                   <li class="reasons-item">
                     <div class="reasons-item-content">
                       <h3>Красивая дорога</h3>
                       <p>&ndash; №4 &ndash;</p>
-                      <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                      <p>Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
                     </div>
                   </li>
                   <li class="reasons-item">
                     <div class="reasons-item-content">
                       <h3>Мало туристов</h3>
                       <p>&ndash; №5 &ndash;</p>
-                      <p>Большинство едет в Гранд Каньон и толпится там</p>
+                      <p>Большинство едет в Гранд Каньон и&nbsp;толпится там</p>
                     </div>
                   </li>
               </ol>
           </section>
-          <div>
+          <div class="main-offer-wrapper">
             <div class="main-offer">
               <h2 class="main-offer-title">Заинтересовались?</h2>
-              <p class="main-offer-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <button class="button gray-button" type="button" name="find-hotel">Поиск гостиницы в Седоне</button>
+              <p class="main-offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <button class="button" type="button" name="find-hotel">Поиск гостиницы в Седоне</button>
             </div>
             <section class="modal-search visually-hidden">
               <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
@@ -98,19 +98,19 @@
                 <input type="date" id="check-out-date" name="check-out-date" value="2017-07-04">
                 <br>
                 <label for="adults-quantity">Взрослые:</label>
-                <button type="button">-</button>
+                <button type="button" name="less-adults-button">-</button>
                 <input type="number" id="adults-quantity" name="adults-quantity" value="2">
-                <button type="button">+</button>
+                <button type="button" name="more-adults-button">+</button>
                 <br>
                 <label for="children-quantity">Дети:</label>
-                <button type="button">-</button>
+                <button type="button" name="less-children-button">-</button>
                 <input type="number" id="children-quantity" name="children-quantity" value="0">
-                <button type="button">+</button>
+                <button type="button" name="more-children-button">+</button>
                 <br>
                 <button class="button item-accent" type="submit">Найти</button>
               </form>
             </section>
-            <img src="img/index_map.png" width="1200" height="593" alt="Карта местности города Седона">
+            <iframe class="interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209418.51946700973!2d-111.82397825129519!3d34.90232446378367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1583614658896!5m2!1sru!2sru" width="1200" height="591" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </div>
       </main>
       <footer class="main-footer index">
@@ -129,5 +129,6 @@
           </p>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
