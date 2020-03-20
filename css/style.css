@@ -48,16 +48,20 @@ a {
 }
 
 .site-navigation {
-  min-height: 56px;
+  /* min-height: 56px; */
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  /* align-content: stretch; */
+  flex-wrap: wrap;
 }
 
 .site-navigation-item {
   background-color: lightblue; /* убрать */
-  margin: 0 70px;
+  outline: black solid 1px;
+  outline-offset: -1px;
+
+  display: block;
+  width: 240px;
 }
 
 .site-navigation-item:nth-child(2) {
@@ -66,6 +70,13 @@ a {
 
 .site-navigation-item:nth-child(3) {
   margin-left: auto;
+}
+
+.site-navigation a {
+  display: block;
+  min-height: 36px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .main-description,
@@ -257,11 +268,13 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #766357;
+  border: none;
 }
 
 .main-offer .button {
-  width: 570px;
+  width: 568px;
   min-height: 88px;
+  border: none;
 }
 
 .modal-search {
@@ -269,15 +282,99 @@ a {
   width: 568px;
   min-height: 395px;
   left: 50%;
+  background-color: #ffffff;
   transform: translateX(-50%);
   z-index: 1;
-  background-color: lightcoral; /* убрать */
 }
 
 .modal-search form {
   width: 458px;
   min-height: 285px;
   margin: 55px auto;
+  padding: 0;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.modal-search label {
+  height: 38px;
+  line-height: 38px;
+  vertical-align: middle;
+}
+
+.modal-search input {
+  width: 345px;
+  height: 38px;
+  font-weight: bold;
+  border: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.modal-search input:focus {
+  /*здесь будет фокус на полях ввода*/
+}
+
+.modal-search input[type="text"] {
+  padding-left: 12px;
+  padding-right: 40px;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.calendar {
+  position: absolute;
+  width: 21px;
+  height: 22px;
+  top: 8px;
+  right: 9px;
+  z-index: 10;
+  background-image: url("../img/calendar.svg");
+  background-size: 21px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.calendar.check-out-date {
+  top: 74px;
+}
+
+.modal-search input[type="number"] {
+  width: 38px;
+  text-align: center;
+}
+
+.modal-search button[name$="button"] {
+  width: 38px;
+  height: 38px;
+  margin-top: 0;
+}
+
+.modal-search button[name="less-adults-button"] {
+  margin-left: 41px;
+}
+
+.modal-search button[name="less-children-button"] {
+  margin-left: 27px;
+}
+
+.modal-search label[for^="children"] {
+  margin-left: auto;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.modal-search button {
+  width: 458px;
+  height: 58px;
+  margin-top: auto;
+  padding: 0;
+  border: none;
 }
 
 .interactive-map {
@@ -326,7 +423,6 @@ a {
 .sorting-direction {
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
 }
 
 .found-text {
@@ -341,11 +437,12 @@ a {
 .sorting h4 {
   font-size: 12px;
   line-height: 12px;
+  font-weight: normal;
   margin: 39px 0 0 48px;
 }
 
 .sorting-order {
-  margin: 36px 0 0 41px;
+  margin: 36px 0 0 40px;
 }
 
 .sorting-order li {
@@ -370,6 +467,12 @@ a {
   margin-top: 36px;
   margin-left: auto;
   margin-right: 73px;
+}
+
+.sorting-direction button {
+  width: 7px;
+  height: 15px;
+  margin-left: 7px;
 }
 
 .hotels-list {
@@ -427,14 +530,12 @@ a {
   display: inline-block;
   text-align: center;
   margin: 5px 3px 0 0;
+  line-height: 27px;
+  vertical-align: middle;
 }
 
 .hotels-description-block .button:not(.item-accent) {
   width: 142px;
-}
-
-.hotels-description-block span {
-  vertical-align: middle;
 }
 
 .hotels-rating-block p {
@@ -443,14 +544,12 @@ a {
 
 .hotels-rating-block .hotel-rating {
   font-size: 14px;
+  line-height: 27px;
   color: #666666;
   background-color: #f2f2f2;
   width: 110px;
   min-height: 27px;
   text-align: center;
-}
-
-.hotel-rating span {
   vertical-align: middle;
 }
 
@@ -459,7 +558,6 @@ a {
   width: 100%;
   min-height: 120px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -468,39 +566,35 @@ a {
   position: relative;
 }
 
-.footer-contacts,
-.footer-social,
-.footer-copyright {
-  background-color: lightslategray; /*убрать*/
-}
-
 .footer-social {
+  margin-left: 177px;
   display: flex;
+  font-size: 0;
 }
 
 .social-button a {
   display: inline-block;
-  width: 46px;
+  width: 47px;
   height: 48px;
   background-color: #81b3d2;
   background-repeat: no-repeat;
   background-position: center center;
-  margin: auto 5px;
+  margin: auto 5px auto 0;
 }
 
 .twitter a {
   background-image: url("../img/twitter.svg");
-  background-size: 40%;
+  background-size: 37%;
 }
 
 .facebook a {
   background-image: url("../img/fb-icon.svg");
-  background-size: 25%;
+  background-size: 26%;
 }
 
 .youtube a {
   background-image: url("../img/youtube.svg");
-  background-size: 40%;
+  background-size: 42%;
 }
 
 .footer-copyright {
@@ -513,14 +607,19 @@ a {
 }
 
 .footer-contacts {
+  margin-left: 124px;
   font-size: 21px;
   font-weight: bold;
-  /* line-height: 1.2em; */
+  line-height: 30px;
 }
 
 .footer-copyright {
+  font-size: 0;
+  margin-left: 225px;
+}
+
+.footer-copyright span {
   font-size: 14px;
-  /* line-height: 1.8em; */
 }
 
 .item-accent {
