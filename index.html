@@ -92,21 +92,23 @@
               <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
               <form action="https://echo.htmlacademy.ru/courses" method="post">
                 <label for="check-in-date">Дата заезда:</label>
-                <input type="date" id="check-in-date" name="check-in-date" value="2017-04-24">
-                <br>
+                <input type="text" id="check-in-date" name="check-in-date" value="24 апреля 2017" required>
+                <div class="calendar check-in-date"></div>
+
                 <label for="check-out-date">Дата выезда:</label>
-                <input type="date" id="check-out-date" name="check-out-date" value="2017-07-04">
-                <br>
+                <input type="text" id="check-out-date" name="check-out-date" value="4 июля 2017" required>
+                <div class="calendar check-out-date"></div>
+
                 <label for="adults-quantity">Взрослые:</label>
                 <button type="button" name="less-adults-button">-</button>
                 <input type="number" id="adults-quantity" name="adults-quantity" value="2">
                 <button type="button" name="more-adults-button">+</button>
-                <br>
+                
                 <label for="children-quantity">Дети:</label>
                 <button type="button" name="less-children-button">-</button>
                 <input type="number" id="children-quantity" name="children-quantity" value="0">
                 <button type="button" name="more-children-button">+</button>
-                <br>
+                
                 <button class="button item-accent" type="submit">Найти</button>
               </form>
             </section>
@@ -124,7 +126,7 @@
               <li class="social-button youtube"><a href="#"></a></li>
           </ul>
           <p class="footer-copyright">
-              Website by
+              <span>Website by</span>
               <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
           </p>
       </footer>
