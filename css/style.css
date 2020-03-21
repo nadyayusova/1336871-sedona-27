@@ -427,10 +427,6 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 22px;
 }
 
-.filter-box input[type="checkbox"] {
-  display: none;
-}
-
 .filter-box label[for]::before {
   content: "";
   display: inline-block;

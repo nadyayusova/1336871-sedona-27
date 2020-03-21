@@ -27,27 +27,29 @@
                 <form action="https://echo.htmlacademy.ru/courses" method="post">
                   <fieldset class="infrastructure">
                       <legend>Инфраструктура:</legend>
-                      <input type="checkbox" id="infrastructure-pool" name="infrastructure-pool" checked>
+                      <input class="visually-hidden" type="checkbox" id="infrastructure-pool" name="infrastructure-pool" checked>
                       <label for="infrastructure-pool">Бассейн</label>
-                      <input type="checkbox" id="infrastructure-parking" name="infrastructure-parking">
+                      <input class="visually-hidden" type="checkbox" id="infrastructure-parking" name="infrastructure-parking">
                       <label for="infrastructure-parking">Парковка</label>
-                      <input type="checkbox" id="infrastructure-wifi" name="infrastructure-wifi">
+                      <input class="visually-hidden" type="checkbox" id="infrastructure-wifi" name="infrastructure-wifi">
                       <label for="infrastructure-wifi">Wi-fi</label>
                  </fieldset>
                  <fieldset class="housing-types">
                       <legend>Тип жилья:</legend>
-                      <input type="checkbox" id="type-hotel" name="type-hotel" checked>
+                      <input class="visually-hidden" type="checkbox" id="type-hotel" name="type-hotel" checked>
                       <label for="type-hotel">Гостиница</label>
-                      <input type="checkbox" id="type-motel" name="type-motel" checked>
+                      <input class="visually-hidden" type="checkbox" id="type-motel" name="type-motel" checked>
                       <label for="type-motel">Мотель</label>
-                      <input type="checkbox" id="type-apartments" name="type-apartments" checked>
+                      <input class="visually-hidden" type="checkbox" id="type-apartments" name="type-apartments" checked>
                       <label for="type-apartments">Апартаменты</label>
                   </fieldset>
                   <fieldset class="price-range">
                       <legend>Стоимость в сутки (Р):</legend>
                       <div class="numbers-wrapper">
-                        <input class="cost-per-day-from" type="text" name="cost-per-day-from" value="От 0" tabindex="-1" readonly>
-                        <input class="cost-per-day-to" type="text" name="cost-per-day-to" value="до 3000" tabindex="-1" readonly>
+                        <p>От <input type="number" name="cost-per-day-from" value="0"></p>
+                        <p>до <input type="number" name="cost-per-day-to" value="3000"></p>
+                        <!-- <input class="cost-per-day-from" type="text" name="cost-per-day-from" value="От 0" tabindex="-1" readonly>
+                        <input class="cost-per-day-to" type="text" name="cost-per-day-to" value="до 3000" tabindex="-1" readonly> -->
                       </div>
                       <input class="price-scale" type="range" name="price-scale" min="0" max="3560" value="3000">
                       <button type="submit">Показать</button>
