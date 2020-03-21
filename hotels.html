@@ -25,7 +25,7 @@
             <section class="filter-box">
                 <h2 class="visually-hidden">Фильтр для поиска</h2>
                 <form action="https://echo.htmlacademy.ru/courses" method="post">
-                  <fieldset>
+                  <fieldset class="infrastructure">
                       <legend>Инфраструктура:</legend>
                       <input type="checkbox" id="infrastructure-pool" name="infrastructure-pool" checked>
                       <label for="infrastructure-pool">Бассейн</label>
@@ -34,7 +34,7 @@
                       <input type="checkbox" id="infrastructure-wifi" name="infrastructure-wifi">
                       <label for="infrastructure-wifi">Wi-fi</label>
                  </fieldset>
-                 <fieldset>
+                 <fieldset class="housing-types">
                       <legend>Тип жилья:</legend>
                       <input type="checkbox" id="type-hotel" name="type-hotel" checked>
                       <label for="type-hotel">Гостиница</label>
@@ -43,11 +43,13 @@
                       <input type="checkbox" id="type-apartments" name="type-apartments" checked>
                       <label for="type-apartments">Апартаменты</label>
                   </fieldset>
-                  <fieldset>
+                  <fieldset class="price-range">
                       <legend>Стоимость в сутки (Р):</legend>
-                      <p>От <input type="number" name="cost-per-day-from" value="0"></p>
-                      <p>до <input type="number" name="cost-per-day-to" value="3000"></p>
-                      <input type="range">
+                      <div class="numbers-wrapper">
+                        <input class="cost-per-day-from" type="text" name="cost-per-day-from" value="От 0" tabindex="-1" readonly>
+                        <input class="cost-per-day-to" type="text" name="cost-per-day-to" value="до 3000" tabindex="-1" readonly>
+                      </div>
+                      <input class="price-scale" type="range" name="price-scale" min="0" max="3560" value="3000">
                       <button type="submit">Показать</button>
                   </fieldset>
               </form>
@@ -62,8 +64,12 @@
                   </ul>
                   <h4 class="visually-hidden">Направление сортировки</h4>
                   <ul class="sorting-direction reset-list">
-                      <li><button type="button" name="sort-ascending">вверх</button></li>
-                      <li><button type="button" name="sort-descending">вниз</button></li>
+                      <li><button type="button" name="sort-ascending">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
+                      </button></li>
+                      <li><button class="current-sorting-direction" type="button" name="sort-descending">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg>
+                      </button></li>
                   </ul>
               </div>
             </section>
@@ -78,13 +84,19 @@
                       <p class="hotels-specifications">от 4000 р.</p>
                     </div>
                     <div>
-                      <a class="button item-accent" href="#"><span>Подробнее</a>
-                      <a class="button" href="#"><span>Забронировать</span></a>
+                      <a class="button item-accent" href="#">Подробнее</a>
+                      <a class="button" href="#">Забронировать</a>
                     </div>
                   </div>
                   <div class="hotels-rating-block">
-                    <p>4 звезды</p>
-                    <p class="hotel-rating"><span>Рейтинг: 8,5</span></p>
+                    <h4 class="visually-hidden">Четыре звезды</h4>
+                    <ul class="stars reset-list">
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                    </ul>
+                    <p class="hotel-rating">Рейтинг: 8,5</p>
                   </div>
                 </article>
                 <article class="hotels-record">
@@ -96,13 +108,18 @@
                       <p class="hotels-specifications">от 3000 р.</p>
                     </div>
                     <div>
-                      <a class="button item-accent" href="#"><span>Подробнее</span></a>
-                      <a class="button" href="#"><span>Забронировать</span></a>
+                      <a class="button item-accent" href="#">Подробнее</a>
+                      <a class="button" href="#">Забронировать</a>
                     </div>
                   </div>
                   <div class="hotels-rating-block">
-                    <p>3 звезды</p>
-                    <p class="hotel-rating"><span>Рейтинг: 8,9</span></p>
+                    <h4 class="visually-hidden">Три звезды</h4>
+                    <ul class="stars reset-list">
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                    </ul>
+                    <p class="hotel-rating">Рейтинг: 8,9</p>
                   </div>
                 </article>
                 <article class="hotels-record">
@@ -114,13 +131,17 @@
                       <p class="hotels-specifications">от 2000 р.</p>
                     </div>
                     <div>
-                      <a class="button item-accent" href="#"><span>Подробнее</span></a>
-                      <a class="button" href="#"><span>Забронировать</span></a>
+                      <a class="button item-accent" href="#">Подробнее</a>
+                      <a class="button" href="#">Забронировать</a>
                     </div>
                   </div>
                   <div class="hotels-rating-block">
-                    <p>2 звезды</p>
-                    <p class="hotel-rating"><span>Рейтинг: 9,2</span></p>
+                    <h4 class="visually-hidden">Две звезды</h4>
+                    <ul class="stars reset-list">
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></li>
+                    </ul>
+                    <p class="hotel-rating">Рейтинг: 9,2</p>
                   </div>
                 </article>
             </section>
@@ -136,7 +157,7 @@
                 <li class="social-button youtube"><a href="#"></a></li>
             </ul>
               <p class="footer-copyright">
-                Website by
+                <span>Website by</span>
                 <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
             </p>
         </footer>
