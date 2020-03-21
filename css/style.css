@@ -390,7 +390,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-image: url("../img/filter_background.jpg") ;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 217px;
+  min-height: 188px;
 }
 
 .filter-box legend {
@@ -398,11 +398,99 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .filter-box form {
+  padding: 28px 72px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.filter-box fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.filter-box legend {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.filter-box .infrastructure {
+  margin-right: 117px;
+}
+
+.filter-box .price-range {
+  margin-left: auto;
+}
+
+.filter-box label {
+  display: block;
+  margin-top: 22px;
+}
+
+.filter-box input[type="checkbox"] {
+  display: none;
+}
+
+.filter-box label[for]::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 24px;
+  margin-right: 12px;
+  background: url("../img/checkbox-off.svg") 0 0 no-repeat;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.filter-box input[type="checkbox"]:checked + label[for]::before {
+  background: url("../img/checkbox-on.svg") 0 0 no-repeat;
+}
+
+.price-range legend {
+  margin-bottom: 12px;
+}
+
+.filter-box .numbers-wrapper {
+  padding: 3px;
+  border: 2px solid #ffffff;
+}
+
+.numbers-wrapper input {
+  display: inline-block;
+  text-align: center;
+  width: 152px;
+  margin: 3px 0;
+  padding: 2px 0;
+  border: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  cursor: default;
+}
+
+.numbers-wrapper input:focus {
+  outline: none;
+}
+
+.numbers-wrapper .cost-per-day-from {
+  margin-right: -3px;
+}
+
+.numbers-wrapper .cost-per-day-to {
+  border-left: 2px solid #ffffff;
+}
+
+.price-range .price-scale {
+  display: block;
+  width: 306px;
+  margin-top: 10px;
+  margin-left: 9px;
 }
 
 .filter-box button[type="submit"] {
+  padding: 8px 33px;
+  margin-top: 23px;
+  margin-left: 84px;
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
@@ -470,9 +558,20 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .sorting-direction button {
-  width: 7px;
-  height: 15px;
-  margin-left: 7px;
+  width: 13px;
+  height: 17px;
+  padding: 0;
+  margin-left: 9px;
+  border: none;
+  background-color: transparent;
+}
+
+.sorting-direction svg {
+  fill: #cacaca;
+}
+
+.current-sorting-direction svg {
+  fill: #81b3d2;
 }
 
 .hotels-list {
@@ -536,6 +635,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .hotels-description-block .button:not(.item-accent) {
   width: 142px;
+}
+
+.hotels-rating-block li {
+  display: inline-block;
+  margin-left: 2px;
 }
 
 .hotels-rating-block p {
