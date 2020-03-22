@@ -46,12 +46,18 @@
                   <fieldset class="price-range">
                       <legend>Стоимость в сутки (Р):</legend>
                       <div class="numbers-wrapper">
-                        <p>От <input type="number" name="cost-per-day-from" value="0"></p>
-                        <p>до <input type="number" name="cost-per-day-to" value="3000"></p>
-                        <!-- <input class="cost-per-day-from" type="text" name="cost-per-day-from" value="От 0" tabindex="-1" readonly>
-                        <input class="cost-per-day-to" type="text" name="cost-per-day-to" value="до 3000" tabindex="-1" readonly> -->
+                        <div class="price-range-from">
+                          <label>От <input type="number" name="cost-per-day-from" value="0"></label>
+                        </div>
+                        <div class="price-range-to">
+                          <label>до <input type="number" name="cost-per-day-to" value="3000"></label>
+                        </div>
                       </div>
-                      <input class="price-scale" type="range" name="price-scale" min="0" max="3560" value="3000">
+                      <div class="price-scale">
+                        <div class="slider"><div class="chosen-range"></div></div>
+                        <div class="thumb min-price-thumb"></div>
+                        <div class="thumb max-price-thumb"></div>
+                      </div>
                       <button type="submit">Показать</button>
                   </fieldset>
               </form>
