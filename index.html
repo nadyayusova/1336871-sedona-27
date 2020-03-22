@@ -54,7 +54,7 @@
                   <li class="reasons-item item-accent">
                     <img src="img/town_picture2.jpg" width="800" height="256" alt="Фото Моста Дьявола">
                     <div class="reasons-item-content">
-                      <h3>Там есть мост&nbsp;дьявола</h3>
+                      <h3>Там есть<br>мост дьявола</h3>
                       <p>&ndash; №2 &ndash;</p>
                       <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
                     </div>
@@ -88,27 +88,69 @@
               <p class="main-offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
               <button class="button" type="button" name="find-hotel">Поиск гостиницы в Седоне</button>
             </div>
-            <section class="modal-search visually-hidden">
+            <section class="modal-search">
               <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
               <form action="https://echo.htmlacademy.ru/courses" method="post">
-                <label for="check-in-date">Дата заезда:</label>
-                <input type="text" id="check-in-date" name="check-in-date" value="24 апреля 2017" required>
-                <div class="calendar check-in-date"></div>
-
-                <label for="check-out-date">Дата выезда:</label>
-                <input type="text" id="check-out-date" name="check-out-date" value="4 июля 2017" required>
-                <div class="calendar check-out-date"></div>
-
-                <label for="adults-quantity">Взрослые:</label>
-                <button type="button" name="less-adults-button">-</button>
-                <input type="number" id="adults-quantity" name="adults-quantity" value="2">
-                <button type="button" name="more-adults-button">+</button>
-                
-                <label for="children-quantity">Дети:</label>
-                <button type="button" name="less-children-button">-</button>
-                <input type="number" id="children-quantity" name="children-quantity" value="0">
-                <button type="button" name="more-children-button">+</button>
-                
+                <div class="date-wrapper">
+                    <label for="check-in-date">Дата заезда:</label>
+                    <input type="text" id="check-in-date" name="check-in-date" value="24 апреля 2017" required>
+                    <button type="button" name="calendar-in">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
+                    </button>
+                  </div>
+                  <div class="date-wrapper">
+                    <label for="check-out-date">Дата выезда:</label>
+                    <input type="text" id="check-out-date" name="check-out-date" value="4 июля 2017" required>
+                    <button type="button" name="calendar-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
+                    </button>
+                  </div>
+                  <div class="quantity-wrapper">
+                    <div class="adults-quantity-wrapper">
+                      <label for="adults-quantity">Взрослые:</label>
+                      <div class="buttons-wrapper">
+                        <button type="button" name="less-adults-button">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="12px" height="7px">
+                           <image  x="0px" y="0px" width="12px" height="3px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAADCAQAAAANKia5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAxYSLThkWRTIAAAAG0lEQVQI12NcGcqwigEThDExKDFgA0pMDDgAAJRfAkg0BAZUAAAAAElFTkSuQmCC" />
+                           </svg>
+                        </button>
+                        <input type="number" id="adults-quantity" name="adults-quantity" value="2">
+                        <button type="button" name="more-adults-button">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="11px" height="11px">
+                           <image  x="0px" y="0px" width="11px" height="11px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAQAAAADpb+tAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAxYSKjO8yluHAAAASElEQVQI12NggIKVZ1b+X3kGxmOCMRiMoRhNGAXgEGZceQahFQ7OMq78j92Q91hE3zPCHfifgYGBIZyRHJcghN9DMQMDAwMDAIC4DuMojQSIAAAAAElFTkSuQmCC" />
+                           </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="children-quantity-wrapper">
+                      <label for="children-quantity">Дети:</label>
+                      <div class="buttons-wrapper">
+                        <button type="button" name="less-children-button">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="12px" height="7px">
+                           <image  x="0px" y="0px" width="12px" height="3px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAADCAQAAAANKia5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAxYSLThkWRTIAAAAG0lEQVQI12NcGcqwigEThDExKDFgA0pMDDgAAJRfAkg0BAZUAAAAAElFTkSuQmCC" />
+                           </svg>
+                        </button>
+                        <input type="number" id="children-quantity" name="children-quantity" value="0">
+                        <button type="button" name="more-children-button">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="11px" height="11px">
+                           <image  x="0px" y="0px" width="11px" height="11px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAQAAAADpb+tAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAxYSKjO8yluHAAAASElEQVQI12NggIKVZ1b+X3kGxmOCMRiMoRhNGAXgEGZceQahFQ7OMq78j92Q91hE3zPCHfifgYGBIZyRHJcghN9DMQMDAwMDAIC4DuMojQSIAAAAAElFTkSuQmCC" />
+                           </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>  
                 <button class="button item-accent" type="submit">Найти</button>
               </form>
             </section>
