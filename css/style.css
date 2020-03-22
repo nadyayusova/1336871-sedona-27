@@ -44,24 +44,28 @@ a {
 .main-navigation {
   font-size: 14px;
   font-weight: bold;
-  /* line-height: 1.8em; */
 }
 
 .site-navigation {
-  /* min-height: 56px; */
   background-color: #ffffff;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .site-navigation-item {
-  background-color: lightblue; /* убрать */
-  outline: black solid 1px;
-  outline-offset: -1px;
-
   display: block;
-  width: 240px;
+  width: 168px;
+  min-height: 56px;
+}
+
+.site-navigation-item:nth-child(-n+2) {
+  text-align: left;
+  padding-left: 72px;
+}
+
+.site-navigation-item:nth-child(n+3) {
+  text-align: right;
+  padding-right: 72px;
 }
 
 .site-navigation-item:nth-child(2) {
@@ -73,10 +77,8 @@ a {
 }
 
 .site-navigation a {
-  display: block;
-  min-height: 36px;
-  padding-top: 20px;
-  text-align: center;
+  line-height: 56px;
+  vertical-align: middle;
 }
 
 .main-description,
@@ -180,7 +182,6 @@ a {
 .reasons .reasons-item-content {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -295,73 +296,73 @@ a {
   font-weight: bold;
   display: flex;
   flex-wrap: wrap;
-  position: relative;
-}
-
-.modal-search label {
-  height: 38px;
-  line-height: 38px;
-  vertical-align: middle;
+  align-content: flex-start;
 }
 
 .modal-search input {
-  width: 345px;
-  height: 38px;
+  width: 307px;
+  min-height: 38px;
   font-weight: bold;
   border: none;
   background-color: #f2f2f2;
   box-sizing: border-box;
 }
 
-.modal-search input:focus {
-  /*здесь будет фокус на полях ввода*/
+.modal-search .date-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.modal-search input[type="text"] {
-  padding-left: 12px;
-  padding-right: 40px;
+.date-wrapper input {
   margin-left: auto;
+  padding: 0 11px;
   text-transform: uppercase;
 }
 
-.calendar {
-  position: absolute;
-  width: 21px;
-  height: 22px;
-  top: 8px;
-  right: 9px;
-  z-index: 10;
-  background-image: url("../img/calendar.svg");
-  background-size: 21px 22px;
-  background-repeat: no-repeat;
-  background-position: center;
+.date-wrapper button[name^="calendar"] {
+  width: 38px;
+  height: 38px;
 }
 
-.calendar.check-out-date {
-  top: 74px;
+.date-wrapper svg {
+  fill: #a9a9a9;
 }
 
-.modal-search input[type="number"] {
+.modal-search .quantity-wrapper {
+  margin-bottom: 53px;
+}
+
+.modal-search .quantity-wrapper,
+.modal-search .children-quantity-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.modal-search .adults-quantity-wrapper {
+  width: 227px;
+  display: flex;
+  align-items: center;
+  margin-right: 53px;
+}
+
+.buttons-wrapper {
+  width: 114px;
+  margin-left: auto;
+  display: flex;
+}
+
+.quantity-wrapper input[type="number"] {
   width: 38px;
   text-align: center;
 }
 
-.modal-search button[name$="button"] {
+.quantity-wrapper button[name$="button"] {
   width: 38px;
   height: 38px;
   margin-top: 0;
-}
-
-.modal-search button[name="less-adults-button"] {
-  margin-left: 41px;
-}
-
-.modal-search button[name="less-children-button"] {
-  margin-left: 27px;
-}
-
-.modal-search label[for^="children"] {
-  margin-left: auto;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -372,7 +373,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .modal-search button {
   width: 458px;
   height: 58px;
-  margin-top: auto;
   padding: 0;
   border: none;
 }
@@ -442,55 +442,96 @@ input[type="number"]::-webkit-inner-spin-button {
   background: url("../img/checkbox-on.svg") 0 0 no-repeat;
 }
 
+.infrastructure input:focus + label[for]::before,
+.housing-types input:focus + label[for]::before {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 .price-range legend {
   margin-bottom: 12px;
 }
 
 .filter-box .numbers-wrapper {
-  padding: 3px;
+  padding: 4px;
   border: 2px solid #ffffff;
+  display: flex;
+}
+
+.numbers-wrapper div {
+  width: 150px;
+  margin: 0;
+  padding: 2px 1px;
+}
+
+.numbers-wrapper .price-range-to {
+  border-left: 2px solid #ffffff;
+}
+
+.numbers-wrapper label {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 55px;
 }
 
 .numbers-wrapper input {
   display: inline-block;
-  text-align: center;
-  width: 152px;
-  margin: 3px 0;
-  padding: 2px 0;
+  width: 60px;
+  margin: 1px 0;
   border: none;
   text-transform: uppercase;
   color: #ffffff;
   background: transparent;
-  cursor: default;
 }
 
-.numbers-wrapper input:focus {
-  outline: none;
+.price-scale {
+  position: relative;
 }
 
-.numbers-wrapper .cost-per-day-from {
-  margin-right: -3px;
-}
-
-.numbers-wrapper .cost-per-day-to {
-  border-left: 2px solid #ffffff;
-}
-
-.price-range .price-scale {
-  display: block;
+.price-scale .slider {
   width: 306px;
-  margin-top: 10px;
-  margin-left: 9px;
+  height: 2px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-scale .chosen-range {
+  width: 254px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.price-scale .thumb {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.2);
+  cursor: pointer;  
+}
+
+.price-scale .min-price-thumb {
+  left: 0;
+}
+
+.price-scale .max-price-thumb {
+  left: 254px;
 }
 
 .filter-box button[type="submit"] {
-  padding: 8px 33px;
-  margin-top: 23px;
-  margin-left: 84px;
+  padding: 10px 35px;
+  margin-top: 31px;
+  margin-left: 86px;
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
   background: transparent;
+  border: none;
+  outline: #ffffff solid 2px;
+  outline-offset: -2px;
 }
 
 .sorting {
@@ -614,7 +655,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 14px;
   color: #333333;
   display: inline-block;
-  /* vertical-align: top; */
+  vertical-align: top;
   width: 110px;
   margin: 12px 3px 12px 0;
 }
