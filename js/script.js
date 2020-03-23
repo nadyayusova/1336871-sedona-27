@@ -8,8 +8,6 @@ var adultsQuantityInput = form.querySelector("[name=adults-quantity]");
 var lessChildrenButton = form.querySelector("[name=less-children-button]");
 var moreChildrenButton = form.querySelector("[name=more-children-button]");
 var childrenQuantityInput = form.querySelector("[name=children-quantity]");
-// var checkInDate= form.querySelector("[name=check-in-date]");
-// var checkOutDate= form.querySelector("[name=check-out-date]");
 
 window.onload = function() {
   findWindow.classList.toggle("visually-hidden");
@@ -43,13 +41,3 @@ moreChildrenButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   childrenQuantityInput.value++;
 });
-// form.addEventListener("submit", function(evt) {
-//   evt.preventDefault();
-//   console.log(checkInDate.value);
-//   console.log(checkOutDate.value);
-//   if (checkOutDate.value > checkInDate.value) {
-//     console.log("Даты правильные");
-//   } else {
-//     console.log("Беда с датами");
-//   }
-// });
