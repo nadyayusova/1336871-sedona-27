@@ -181,6 +181,10 @@ a {
   background-color: #eeeeee;
 }
 
+.reasons-item:not(.item-accent) h3 {
+  width: 32%;
+}
+
 .reasons-item:not(.item-accent) p {
   width: 70%;
 }
@@ -277,6 +281,7 @@ a {
   width: 75%;
   font-size: 14px;
   line-height: 21px;
+  color: #333333;
   margin: 24px 56px;
 }
 
@@ -364,6 +369,7 @@ a {
 .date-wrapper button[name^="calendar"] {
   width: 38px;
   height: 38px;
+  background-color: #f2f2f2;
 }
 
 .date-wrapper button[name^="calendar"]:hover svg {
@@ -424,6 +430,7 @@ a {
   width: 38px;
   height: 38px;
   margin-top: 0;
+  background-color: #f2f2f2;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -470,6 +477,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .filter-box .infrastructure {
   margin-right: 117px;
+}
+
+.infrastructure ul,
+.housing-types ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-box .price-range {
@@ -785,7 +799,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
   min-height: 120px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .main-footer.index {
@@ -795,6 +809,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .footer-social {
   margin-left: 177px;
+  margin-top: 35px;
   display: flex;
   font-size: 0;
 }
@@ -818,6 +833,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .footer-copyright {
+  padding-top: 5px;
   display: flex;
   align-items: center;
 }
@@ -827,10 +843,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .footer-contacts {
+  margin-top: 30px;
   margin-left: 124px;
   font-size: 21px;
   font-weight: bold;
   line-height: 30px;
+}
+
+.footer-contacts a {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-copyright {
