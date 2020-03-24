@@ -502,7 +502,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .infrastructure input:focus + label[for]::before,
 .housing-types input:focus + label[for]::before {
-  outline: -webkit-focus-ring-color auto 1px;
+  outline: #178fff solid 2px;
 }
 
 .price-range legend {
