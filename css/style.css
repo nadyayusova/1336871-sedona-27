@@ -113,7 +113,7 @@ a {
 }
 
 .main-description .main-description-text {
-  margin: 32px 355px 0;
+  margin: 30px 355px 50px;
 }
 
 .main-description::before {
@@ -462,6 +462,8 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 28px 72px 0;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  /* flex-shrink: 0; */
 }
 
 .filter-box fieldset {
@@ -475,14 +477,15 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 3px;
 }
 
-.filter-box .infrastructure {
+.filter-box .infrastructure,
+.filter-box .housing-types {
   margin-right: 117px;
 }
 
 .infrastructure ul,
 .housing-types ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 28px 0;
   padding: 0;
 }
 
@@ -498,6 +501,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .filter-box label[for]::before {
   content: "";
   display: inline-block;
+  vertical-align: top;
   width: 28px;
   height: 24px;
   margin-right: 12px;
@@ -542,12 +546,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .numbers-wrapper label {
   display: inline-block;
+  vertical-align: baseline;
   padding: 0;
   margin: 0 0 0 55px;
 }
 
 .numbers-wrapper input {
   display: inline-block;
+  vertical-align: baseline;
   width: 60px;
   margin: 1px 0;
   border: none;
@@ -603,6 +609,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .filter-box button[type="submit"] {
   padding: 8px 33px;
   margin-top: 31px;
+  margin-bottom: 32px;
   margin-left: 86px;
   font-size: 14px;
   text-transform: uppercase;
@@ -633,6 +640,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .sorting-direction {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .sorting h4 {
@@ -643,7 +651,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .sorting-order {
-  margin: 36px 0 0 40px;
+  width: 600px;
+  margin: 36px 0 30px 40px;
 }
 
 .sorting-order li {
@@ -767,6 +776,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 110px;
   min-height: 27px;
   display: inline-block;
+  vertical-align: top;
   text-align: center;
   margin: 5px 3px 0 0;
   line-height: 27px;
@@ -779,6 +789,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .hotels-rating-block li {
   display: inline-block;
+  vertical-align: top;
   margin-left: 2px;
 }
 
@@ -807,41 +818,6 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
 }
 
-.footer-social {
-  margin-left: 177px;
-  margin-top: 35px;
-  display: flex;
-  font-size: 0;
-}
-
-.social-button a {
-  display: inline-block;
-  width: 47px;
-  height: 48px;
-  background-color: #81b3d2;
-  margin: auto 5px auto 0;
-  fill: #ffffff;
-}
-
-.social-button a:hover {
-  background-color: #669ec0;
-}
-
-.social-button a:active {
-  fill: #88b6d1;
-  background-color: #5496bd;
-}
-
-.footer-copyright {
-  padding-top: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.footer-copyright img {
-  margin-left: 10px;
-}
-
 .footer-contacts {
   margin-top: 30px;
   margin-left: 124px;
@@ -856,17 +832,51 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.footer-copyright {
+.footer-social {
+  width: 156px;
+  margin-left: 177px;
+  margin-top: 36px;
+  margin-bottom: 31px;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 0;
-  margin-left: 223px;
+}
+
+.social-button a {
+  display: inline-block;
+  vertical-align: top;
+  width: 47px;
+  height: 48px;
+  background-color: #81b3d2;
+  margin: auto 5px 5px 0;
+  fill: #ffffff;
+}
+
+.social-button a:hover {
+  background-color: #669ec0;
+}
+
+.social-button a:active {
+  fill: #88b6d1;
+  background-color: #5496bd;
+}
+
+.footer-copyright {
+  margin-top: 40px;
+  margin-left: 222px;
+  margin-bottom: auto;
+  font-size: 0;
 }
 
 .footer-copyright span {
   font-size: 14px;
+  line-height: 40px;
+  vertical-align: top;
 }
 
 .footer-copyright a {
   margin-left: 10px;
+  font-size: 18px;
   fill: #231f20;
 }
 
