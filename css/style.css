@@ -189,7 +189,8 @@ a {
   width: 70%;
 }
 
-.reasons-item-content {
+.reasons-item-content,
+.reasons-item:not(.item-accent) {
   width:400px;
   min-height: 256px; 
 }
@@ -201,7 +202,8 @@ a {
 }
 
 .reasons .features-item,
-.reasons .reasons-item-content {
+.reasons .reasons-item-content,
+.reasons .reasons-item:not(.item-accent) {
   display: flex;
   flex-direction: column;
   align-items: center;
