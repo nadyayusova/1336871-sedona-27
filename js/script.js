@@ -10,12 +10,12 @@ var moreChildrenButton = form.querySelector("[name=more-children-button]");
 var childrenQuantityInput = form.querySelector("[name=children-quantity]");
 
 window.onload = function() {
-  findWindow.classList.toggle("visually-hidden");
+  findWindow.classList.remove("modal-show");
 };
 
 findButton.addEventListener("click", function(evt) {
   evt.preventDefault();
-  findWindow.classList.toggle("visually-hidden");
+  findWindow.classList.toggle("modal-show");
 });
 
 lessAdultsButton.addEventListener("click", function(evt) {
