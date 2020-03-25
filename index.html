@@ -21,13 +21,11 @@
           </nav>
       </header>
       <main class="contents">
-        <h1 class="visually-hidden">Седона</h1>
         <div class="main-description">
           <p class="main-description-title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="main-description-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
-        <section class="reasons">
-          <h2 class="visually-hidden">Причины</h2>
+        <div class="reasons">
           <ol class="reasons-list reset-list">
             <li class="reasons-item item-accent">
               <div class="reasons-item-content">
@@ -60,36 +58,29 @@
               </div>
             </li>
             <li class="reasons-item">
-              <div class="reasons-item-content">
-                <h3>Небольшая площадь</h3>
-                <p>&ndash; №3 &ndash;</p>
-                <p>Все достопримечательности находятся очень близко</p>
-              </div>
+              <h3>Небольшая площадь</h3>
+              <p>&ndash; №3 &ndash;</p>
+              <p>Все достопримечательности находятся очень близко</p>
             </li>
             <li class="reasons-item">
-              <div class="reasons-item-content">
-                <h3>Красивая дорога</h3>
-                <p>&ndash; №4 &ndash;</p>
-                <p>Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
-              </div>
+              <h3>Красивая дорога</h3>
+              <p>&ndash; №4 &ndash;</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
             </li>
             <li class="reasons-item">
-              <div class="reasons-item-content">
-                <h3>Мало туристов</h3>
-                <p>&ndash; №5 &ndash;</p>
-                <p>Большинство едет в Гранд Каньон и&nbsp;толпится&nbsp;там</p>
-              </div>
+              <h3>Мало туристов</h3>
+              <p>&ndash; №5 &ndash;</p>
+              <p>Большинство едет в Гранд Каньон и&nbsp;толпится&nbsp;там</p>
             </li>
           </ol>
-        </section>
+        </div>
         <div class="main-offer-wrapper">
           <div class="main-offer">
             <h2 class="main-offer-title">Заинтересовались?</h2>
             <p class="main-offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <button class="button" type="button" name="find-hotel">Поиск гостиницы в Седоне</button>
           </div>
-          <section class="modal-search">
-            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+          <div class="modal-search">
             <form action="https://echo.htmlacademy.ru/courses" method="post">
               <div class="date-wrapper">
                 <label for="check-in-date">Дата заезда:</label>
@@ -149,7 +140,7 @@
               </div>  
               <button class="button item-accent" type="submit">Найти</button>
             </form>
-          </section>
+          </div>
           <img src="img/index_map.png" width="1200" height="591" alt="Карта местности города Седона">
         </div>
       </main>
