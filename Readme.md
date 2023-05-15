@@ -1,5 +1,9 @@
 # Личный проект «Седона»
 
+Демо: [https://nadyayusova.github.io/1336871-sedona-27/](https://nadyayusova.github.io/1336871-sedona-27/)
+
+---
+
 * Студент: [Надежда Юсова](https://up.htmlacademy.ru/htmlcss/27/user/1336871).
 * Наставник: [Дмитрий Мишагин](https://htmlacademy.ru/profile/id118967).
 
